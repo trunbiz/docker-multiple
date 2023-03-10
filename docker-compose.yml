@@ -3,21 +3,21 @@ version: '3.8'
 services:
   php74:
     build:
-      context: .
+      context: php
       dockerfile: Dockerfile.74
     ports:
     - 80:80
     volumes:
-    - ./php:/var/www/html/
+    - ./app:/var/www/html/
 
   php56:
     build:
-      context: .
+      context: php
       dockerfile: Dockerfile.56
     ports:
     - 88:80
     volumes:
-    - ./php:/var/www/html/
+    - ./app:/var/www/html/
 
   db:
     image: mysql
